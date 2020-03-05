@@ -1,6 +1,6 @@
 from models.item import ItemModel
 from flask_restful import Resource, reqparse
-from flask_jwt import JWT, jwt_required
+from flask_jwt_extended import jwt_required
 
 class Item(Resource):
     parser = reqparse.RequestParser()
@@ -15,7 +15,7 @@ class Item(Resource):
         help='store_id can not be blank'
     )
 
-    @jwt_required()
+    @jwt_required
     def get(self, name):
         item = ItemModel.find_by_name(name)
         if item:
@@ -56,4 +56,4 @@ class Item(Resource):
 
 class ItemList(Resource):
     def get(self):
-        return {'items': [item.json() for item in ItemModel.query.all()]}
+        return {'items': [item.json() for item in ItemModel.find_all()]}

@@ -10,6 +10,11 @@ class UserModel(db.Model):
             self.username = username
             self.password = password
 
+    def json(self):
+        return { 'id': self.id,
+                'username': self.username
+                }
+
     @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(username=username).first()
@@ -20,4 +25,8 @@ class UserModel(db.Model):
 
     def save_to_db(self):
         db.session.add(self)
+        db.session.commit()
+
+    def delete_from_db(self):
+        db.session.delete(self)
         db.session.commit()
