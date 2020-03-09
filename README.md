@@ -22,9 +22,9 @@ Publish the image on [Google Cloud Registry](https://cloud.google.com/container-
 Publish on [Google Cloud Run ](https://cloud.google.com/run/docs/quickstarts/build-and-deploy)
 
 Or even directly on Google Cloud Run
-```
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
-```
+[![Run on Google
+Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/pcampos119104/udemy_flask.git)
+
 
 ## Tests
 The app can be tested with Postman, it is not automatic.
