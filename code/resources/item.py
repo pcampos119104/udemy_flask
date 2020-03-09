@@ -37,6 +37,7 @@ class Item(Resource):
 
         return item.json(), 201
 
+    @fresh_jwt_required
     def put(self, name):
         data = Item.parser.parse_args()
         item = ItemModel.find_by_name(name)
@@ -48,7 +49,7 @@ class Item(Resource):
         item.save_to_db()
         return item.json()
 
-    @jwt_required
+    @fresh_jwt_required
     def delete(self, name):
         claims = get_jwt_claims()
         if not claims['is_admin']:
