@@ -34,10 +34,10 @@ Import the files on folder test.
 Run the different endpoints
 
 ## Built With
-Python 3
-Flask
-Flask-JWT-Extended
-Flask-RESTful
-Flask-SQLAlchemy
-Werkzeug
-SQLite
+- Python 3
+- Flask
+- Flask-JWT-Extended
+- Flask-RESTful
+- Flask-SQLAlchemy
+- Werkzeug
+- SQLite
