@@ -5,7 +5,7 @@ Course that I've taken from Udemy [REST APIs with Flask and Python ](https://www
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Deployment
 
